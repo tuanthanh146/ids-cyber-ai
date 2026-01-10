@@ -17,3 +17,5 @@ black
 isort
 flake8
 scapy>=2.5.0
+plotly>=5.15.0
+networkx>=3.1
