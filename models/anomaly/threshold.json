@@ -1,0 +1,1 @@
+{"threshold": 0.003239130746453393, "metrics": {"Detection_Rate_Recall": 0.8376146788990826, "Precision": 0.8778846153846154, "F1_Score": 0.8572769953051643, "FAR": 0.03248081841432225, "Confusion_Matrix": {"TN": 3783, "FP": 127, "FN": 177, "TP": 913}}}

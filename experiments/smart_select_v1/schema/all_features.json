@@ -1,0 +1,16 @@
+[
+    "duration",
+    "orig_pkts",
+    "resp_pkts",
+    "pkts_total",
+    "orig_bytes",
+    "resp_bytes",
+    "bytes_total",
+    "pkts_per_sec",
+    "bytes_per_sec",
+    "iat_mean",
+    "iat_std",
+    "syn_count",
+    "ack_count",
+    "rst_count"
+]

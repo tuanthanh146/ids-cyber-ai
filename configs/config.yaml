@@ -1,0 +1,21 @@
+project_name: "AI_IDS"
+version: "1.0.0"
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  models: "models/artifacts"
+  logs: "logs"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+
+model:
+  name: "xgboost_ids_v1"
+  type: "xgboost"
+  target_col: "label"
+
+logging:
+  config_path: "configs/logging.yaml"
