@@ -44,7 +44,7 @@ def main():
         uvicorn.run("inference.api:app", host=args.host, port=args.port, reload=True)
         
     elif args.command == "dashboard":
-        os.system("streamlit run dashboard/app.py")
+        os.system("streamlit run dashboard/dashboard_app_v3.py")
 
     elif args.command == "process":
         from scripts.process_pcap import process_pcap

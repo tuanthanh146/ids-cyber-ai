@@ -1,0 +1,74 @@
+{
+    "retraining": {
+        "schedule": {
+            "interval_days": 7,
+            "run_on_start": false
+        },
+        "drift_detection": {
+            "method": "aggregated",
+            "threshold_score": 0.5,
+            "retrain_threshold": 0.8,
+            "monitored_features": [
+                "duration",
+                "orig_pkts",
+                "id.resp_p",
+                "proto"
+            ],
+            "reference_window_days": 7,
+            "weights": {
+                "feature_psi": 0.6,
+                "prediction_drift": 0.4
+            },
+            "prediction_drift": {
+                "max_alert_rate_change": 0.1
+            }
+        },
+        "data_mixing": {
+            "max_samples": 100000,
+            "dataset_strategy": {
+                "sampling_ratios": {
+                    "benchmark": 0.5,
+                    "local_normal": 0.3,
+                    "local_attack": 0.2
+                },
+                "min_samples_per_attack": 100,
+                "time_decay_factor": 0.1,
+                "priority_weights": {
+                    "verified": 2.0,
+                    "hard_sample": 3.0
+                }
+            },
+            "safety": {
+                "max_new_data_ratio": 0.4,
+                "outlier_zscore_threshold": 4.0,
+                "min_confidence_pseudo_label": 0.9,
+                "enable_canary_eval": true
+            }
+        },
+        "anomaly_detection": {
+            "train_window_days": 14,
+            "contamination": 0.01,
+            "percentile_threshold": 99,
+            "max_far_increase": 0.01
+        },
+        "evaluation": {
+            "test_set_path": "data/processed/golden_test.csv",
+            "canary_path": "data/processed/canary_set.csv",
+            "min_f1_improvement": 0.01,
+            "max_far_increase": 0.005,
+            "metrics": [
+                "f1",
+                "precision",
+                "recall",
+                "far"
+            ]
+        },
+        "paths": {
+            "benchmark_data": "data/processed/benchmark_train.csv",
+            "normal_storage": "data/storage/normal",
+            "attack_storage": "data/storage/attacks",
+            "model_registry": "models/production",
+            "archive_dir": "models/archive"
+        }
+    }
+}

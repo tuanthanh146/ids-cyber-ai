@@ -52,10 +52,18 @@ class FlowAggregator:
         proto_map = {6: "TCP", 17: "UDP", 1: "ICMP"}
         proto = proto_map.get(proto_num, "OTHER")
         
+        if packet.haslayer(TCP):
+            sport = packet[TCP].sport
+            dport = packet[TCP].dport
+        elif packet.haslayer(UDP):
+            sport = packet[UDP].sport
+            dport = packet[UDP].dport
+        else:
+            sport = 0
+            dport = 0
+            
         # Flow Key: 5-tuple (src, dst, proto, sport, dport)
-        # For simplicity in this demo, reducing ports to just Tuple IP+Proto
-        # In full IDS, standard flow key includes ports.
-        flow_key = (src, dst, proto)
+        flow_key = (src, dst, proto, sport, dport)
         
         flow = self.active_flows[flow_key]
         if flow["packets"] == 0:
@@ -63,6 +71,8 @@ class FlowAggregator:
             flow["src_ip"] = src
             flow["dst_ip"] = dst
             flow["protocol"] = proto
+            flow["src_port"] = sport
+            flow["dst_port"] = dport
         
         flow["last_time"] = packet.time
         flow["packets"] += 1
@@ -100,7 +110,8 @@ class FlowAggregator:
                 "timestamp": f["start_time"],
                 "src_ip": f["src_ip"],
                 "dst_ip": f["dst_ip"],
-                "proto": f["protocol"], # Renamed from protocol to match model
+                "protocol": f["protocol"], # Preprocessor expects 'protocol', not 'proto'
+                "proto": f["protocol"], # Keep 'proto' for compatibility if needed, duplicates are fine in dict but DataFrame needs correct columns for Transformer
                 "length": f["bytes"], 
                 "flags": flag_str,
                 "duration": duration,
@@ -116,8 +127,8 @@ class FlowAggregator:
                 "bytes_total": f["bytes"],
                 "pkts_per_sec": f["packets"] / (duration + 1e-6),
                 "bytes_per_sec": f["bytes"] / (duration + 1e-6),
-                "src_port": 0, 
-                "dst_port": 0,
+                "src_port": f["src_port"], 
+                "dst_port": f["dst_port"],
                 "iat_mean": 0, "iat_std": 0,
                 "syn_count": 1 if "SYN" in f["flags"] else 0,
                 "ack_count": 1 if "ACK" in f["flags"] else 0,
@@ -204,6 +215,13 @@ class Pipeline:
             proc_x = self.preprocessor.transform(feat_x)
             
             # XGB Prediction
+            # Align features if model has feature selection enabled
+            if hasattr(self.model_xgb, "feature_names_in_"):
+                 expected_cols = self.model_xgb.feature_names_in_
+                 # Ensure strict alignment (reorder/select)
+                 # Missing columns = 0, Extra columns = Drop
+                 proc_x = proc_x.reindex(columns=expected_cols, fill_value=0)
+            
             xgb_preds = self.model_xgb.predict(proc_x)
             xgb_probas = self.model_xgb.predict_proba(proc_x)[:, 1]
             
@@ -227,13 +245,18 @@ class Pipeline:
                     anomaly_score=anom_scores[i]
                 )
                 
-                # Only log significant risks
-                if res['alert_level'] in ["HIGH", "CRITICAL"]:
+                # Log ALL flows for dashboard visualization testing
+                # In production, use ["HIGH", "CRITICAL"]
+                if True: # res['alert_level'] in ["HIGH", "CRITICAL"]:
                     alert = {
                         "timestamp": str(df.iloc[i]['timestamp']),
                         "src": df.iloc[i]['src_ip'],
                         "dst": df.iloc[i]['dst_ip'],
+                        "src_port": int(df.iloc[i]['src_port']),
+                        "dst_port": int(df.iloc[i]['dst_port']),
                         "proto": df.iloc[i]['protocol'],
+                        "xgb_prob": float(xgb_probas[i]),
+                        "anomaly_score": float(anom_scores[i]),
                         **res
                     }
                     alerts.append(alert)

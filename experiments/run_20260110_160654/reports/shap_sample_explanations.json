@@ -1,0 +1,652 @@
+[
+    {
+        "sample_index": 0,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 75.69,
+                "shap_value": 15.322663362695021,
+                "impact": "Positive"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 947.6,
+                "shap_value": 1.7934761733666529,
+                "impact": "Positive"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 871.9,
+                "shap_value": 0.8927757107908838,
+                "impact": "Positive"
+            },
+            {
+                "feature": "syn_count",
+                "value": 6.0,
+                "shap_value": 0.6306208757590502,
+                "impact": "Positive"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 7.0,
+                "shap_value": -0.39046508566709237,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 4.0,
+                "shap_value": 0.24741093252319843,
+                "impact": "Positive"
+            },
+            {
+                "feature": "ack_count",
+                "value": 1.0,
+                "shap_value": -0.14300527354702353,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 0.75897,
+                "shap_value": 0.06996156513923779,
+                "impact": "Positive"
+            },
+            {
+                "feature": "rst_count",
+                "value": 4.0,
+                "shap_value": 0.015117024723440408,
+                "impact": "Positive"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 3.0,
+                "shap_value": -0.010390310543589293,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 1,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 204.28,
+                "shap_value": 13.512442932389677,
+                "impact": "Positive"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 808.44,
+                "shap_value": 2.0251859195472206,
+                "impact": "Positive"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 0.0,
+                "shap_value": 1.4155972154461778,
+                "impact": "Positive"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 604.16,
+                "shap_value": 1.1631135504692793,
+                "impact": "Positive"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 11.0,
+                "shap_value": 0.5959034861985129,
+                "impact": "Positive"
+            },
+            {
+                "feature": "syn_count",
+                "value": 3.0,
+                "shap_value": -0.39184194828849284,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 0.309731,
+                "shap_value": 0.14907895115902647,
+                "impact": "Positive"
+            },
+            {
+                "feature": "ack_count",
+                "value": 0.0,
+                "shap_value": -0.03961648610420525,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 35.5146,
+                "shap_value": -0.006108703939244151,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 11.0,
+                "shap_value": 0.00510963739361614,
+                "impact": "Positive"
+            }
+        ]
+    },
+    {
+        "sample_index": 2,
+        "top_features": [
+            {
+                "feature": "syn_count",
+                "value": 11.0,
+                "shap_value": 8.979620510973037,
+                "impact": "Positive"
+            },
+            {
+                "feature": "resp_bytes",
+                "value": 35.77,
+                "shap_value": 6.835011188018252,
+                "impact": "Positive"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 178.69,
+                "shap_value": 1.7993266671267338,
+                "impact": "Positive"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 142.92,
+                "shap_value": 0.8010803469712846,
+                "impact": "Positive"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 2.0,
+                "shap_value": 0.3015780086372979,
+                "impact": "Positive"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 3.0,
+                "shap_value": -0.1866186344291782,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 1.247958,
+                "shap_value": -0.05177394547499716,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 1.0,
+                "shap_value": -0.044382468550466,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 1.0,
+                "shap_value": -0.006268370880861767,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 2.4039,
+                "shap_value": -0.000891801230609417,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 3,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 195.63,
+                "shap_value": 14.769359099091963,
+                "impact": "Positive"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 842.81,
+                "shap_value": 2.3214750323188493,
+                "impact": "Positive"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 647.18,
+                "shap_value": 1.2049057245673611,
+                "impact": "Positive"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 2.0,
+                "shap_value": 0.5019776413077488,
+                "impact": "Positive"
+            },
+            {
+                "feature": "syn_count",
+                "value": 5.0,
+                "shap_value": -0.2010956641845405,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 8.0,
+                "shap_value": -0.18616367583745158,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 0.045724,
+                "shap_value": 0.1442202585597988,
+                "impact": "Positive"
+            },
+            {
+                "feature": "ack_count",
+                "value": 2.0,
+                "shap_value": -0.10332540206843988,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 6.0,
+                "shap_value": -0.023441506517119706,
+                "impact": "Negative"
+            },
+            {
+                "feature": "rst_count",
+                "value": 0.0,
+                "shap_value": -0.0006788447359576821,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 4,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 9412.49,
+                "shap_value": -2.340621278975159,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 10551.8,
+                "shap_value": -0.609595984055195,
+                "impact": "Negative"
+            },
+            {
+                "feature": "syn_count",
+                "value": 4.0,
+                "shap_value": -0.38278965577483176,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 22.0,
+                "shap_value": -0.2618390054721385,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 5.0,
+                "shap_value": -0.25959060475230217,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 13.0,
+                "shap_value": -0.12578319308348,
+                "impact": "Negative"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 19964.29,
+                "shap_value": -0.06361169261857867,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 6.5482,
+                "shap_value": -0.026663510985672476,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 3.359683,
+                "shap_value": -0.022233387771993875,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 9.0,
+                "shap_value": -0.019444966726005077,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 5,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 6114.4,
+                "shap_value": -1.7507440145337023,
+                "impact": "Negative"
+            },
+            {
+                "feature": "syn_count",
+                "value": 0.0,
+                "shap_value": -1.0164212140627205,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 32.0,
+                "shap_value": -0.36352412162406833,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 4.0,
+                "shap_value": -0.3304593970184214,
+                "impact": "Negative"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 16075.35,
+                "shap_value": -0.25137546167592517,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 9960.95,
+                "shap_value": -0.24760546843521297,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 17.0,
+                "shap_value": -0.15450323074357583,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 15.0,
+                "shap_value": 0.0026397299021482467,
+                "impact": "Positive"
+            },
+            {
+                "feature": "rst_count",
+                "value": 0.0,
+                "shap_value": -0.0012592256220523269,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 38.1994,
+                "shap_value": 0.0009119067154824734,
+                "impact": "Positive"
+            }
+        ]
+    },
+    {
+        "sample_index": 6,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 2409.35,
+                "shap_value": -1.757263644868508,
+                "impact": "Negative"
+            },
+            {
+                "feature": "syn_count",
+                "value": 0.0,
+                "shap_value": -0.9694991519860924,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 3.0,
+                "shap_value": -0.39506477665854617,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 15.0,
+                "shap_value": -0.3169786112528527,
+                "impact": "Negative"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 7240.96,
+                "shap_value": -0.2554407570394687,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 4831.61,
+                "shap_value": -0.22669418980833142,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 9.0,
+                "shap_value": -0.15528789558215067,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 2.906692,
+                "shap_value": -0.032033629138022664,
+                "impact": "Negative"
+            },
+            {
+                "feature": "rst_count",
+                "value": 0.0,
+                "shap_value": -0.0014948308619204909,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 5.1605,
+                "shap_value": -0.00142851697281003,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 7,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 6779.36,
+                "shap_value": -1.7517827898659744,
+                "impact": "Negative"
+            },
+            {
+                "feature": "syn_count",
+                "value": 1.0,
+                "shap_value": -1.0148688586615027,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 32.0,
+                "shap_value": -0.36355762504215816,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 7.0,
+                "shap_value": -0.34195395596092565,
+                "impact": "Negative"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 14354.36,
+                "shap_value": -0.25190237631439233,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 7575.0,
+                "shap_value": -0.19481572816614062,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 14.0,
+                "shap_value": -0.15881021560868247,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 1.425628,
+                "shap_value": -0.03304082292248495,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 18.0,
+                "shap_value": 0.0019387547555379568,
+                "impact": "Positive"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 22.4462,
+                "shap_value": -0.0015450119599699974,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 8,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 6281.27,
+                "shap_value": -1.7520411536912435,
+                "impact": "Negative"
+            },
+            {
+                "feature": "syn_count",
+                "value": 1.0,
+                "shap_value": -1.0028620379418134,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 22.0,
+                "shap_value": -0.3721569395193364,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 10.0,
+                "shap_value": -0.33043107683770356,
+                "impact": "Negative"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 13143.63,
+                "shap_value": -0.2513857087539509,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 6862.37,
+                "shap_value": -0.24685052387416362,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 16.0,
+                "shap_value": -0.15464926182525232,
+                "impact": "Negative"
+            },
+            {
+                "feature": "rst_count",
+                "value": 0.0,
+                "shap_value": -0.0012592256220523269,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 47.2767,
+                "shap_value": 0.0007022402063012124,
+                "impact": "Positive"
+            },
+            {
+                "feature": "orig_pkts",
+                "value": 6.0,
+                "shap_value": -0.0005222761852201074,
+                "impact": "Negative"
+            }
+        ]
+    },
+    {
+        "sample_index": 9,
+        "top_features": [
+            {
+                "feature": "resp_bytes",
+                "value": 3028.69,
+                "shap_value": -1.901578485595528,
+                "impact": "Negative"
+            },
+            {
+                "feature": "syn_count",
+                "value": 2.0,
+                "shap_value": -0.9447198064811527,
+                "impact": "Negative"
+            },
+            {
+                "feature": "ack_count",
+                "value": 7.0,
+                "shap_value": -0.38984105790499596,
+                "impact": "Negative"
+            },
+            {
+                "feature": "pkts_total",
+                "value": 11.0,
+                "shap_value": -0.3160799518786371,
+                "impact": "Negative"
+            },
+            {
+                "feature": "orig_bytes",
+                "value": 3108.18,
+                "shap_value": -0.2296013843268156,
+                "impact": "Negative"
+            },
+            {
+                "feature": "bytes_total",
+                "value": 6136.87,
+                "shap_value": -0.21130878799827768,
+                "impact": "Negative"
+            },
+            {
+                "feature": "resp_pkts",
+                "value": 3.0,
+                "shap_value": -0.085508511334192,
+                "impact": "Negative"
+            },
+            {
+                "feature": "duration",
+                "value": 2.113203,
+                "shap_value": -0.032116140022408216,
+                "impact": "Negative"
+            },
+            {
+                "feature": "iat_std",
+                "value": 0.004185,
+                "shap_value": 0.001629028576426208,
+                "impact": "Positive"
+            },
+            {
+                "feature": "pkts_per_sec",
+                "value": 5.2054,
+                "shap_value": -0.001404842585325241,
+                "impact": "Negative"
+            }
+        ]
+    }
+]

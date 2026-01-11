@@ -1,0 +1,2 @@
+{"timestamp": "1768052319.892365", "src": "192.168.1.5", "dst": "10.0.0.5", "src_port": 20, "dst_port": 80, "proto": "TCP", "xgb_prob": 0.33341148495674133, "anomaly_score": -0.03279201099595719, "final_label": 0, "risk_score": 0.0, "alert_level": "LOW", "reasons": "Normal Traffic"}
+{"timestamp": "1768052319.903352", "src": "1.1.1.1", "dst": "10.0.0.5", "src_port": 20, "dst_port": 80, "proto": "TCP", "xgb_prob": 0.33341148495674133, "anomaly_score": -0.03309302031235983, "final_label": 0, "risk_score": 0.0, "alert_level": "LOW", "reasons": "Normal Traffic"}
